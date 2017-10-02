@@ -12,12 +12,30 @@ public class Ex7p6p2 {
         Terminal terminal = TerminalFacade.createTerminal(System.in, System.out, Charset.forName("UTF8"));
         terminal.enterPrivateMode();
         int [][] board = new int[20][20];
+
+
+        for (int i = 0; i < 300; i++) {
+            board[rand.nextInt(20)][rand.nextInt(20)] = rand.nextInt(256);
+        }
+        //Add one random color to the board
+        //int xx = rand.nextInt(20);
+        //int yy = rand.nextInt(20);
+        //board[xx][yy]= 255; //rand.nextInt(255);
+
         while (true) {
-            //Add one random color to the board
-            int xx = rand.nextInt(20);
-            int yy = rand.nextInt(20);
-            board[xx][yy]= 255; // rand.nextInt(255);
+
+
             // TODO: Insert you’re your code to draw on the screen here
+
+            for (int row = 0; row < board.length; row++) {
+                for (int col = 0; col < board[row].length; col++) {
+                    int color = board[row][col];
+                    terminal.moveCursor(row, col);
+                    terminal.applyForegroundColor(color, 0, color);
+                    terminal.putCharacter('\u2588');
+                    //terminal.setCursorVisible(false);
+                }
+            }
 
             // Formula to take the average value of the current cell
             // and all of its neighbors
