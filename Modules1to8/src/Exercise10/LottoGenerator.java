@@ -6,24 +6,43 @@ import java.util.Random;
 public class LottoGenerator {
 
 	public int[] generatNumbers() {
-		int[] array = getInts();
+		int[] array = new int[7];
+		for (int i = 0; i < array.length; i++) {
+			array[i] = generateUniqueNumber(array);
+		}
 		return array;
 	}
 
-	private int[] getInts() {
-		Random rand = new Random();
-		int randomNum = 0;
-		int[] array = new int[7];
+	public int generateUniqueNumber(int[] array) {
+		Random random = new Random();
+		int randomNum;
+		do {
+			randomNum = random.nextInt(35) + 1;
+
+		}while (duplicateExist(array, randomNum));
+		return randomNum;
+	}
+
+	public boolean duplicateExist(int[] array, int num) {
+		boolean checker = false;
 		for (int elem : array) {
-			elem = rand.nextInt(37) + 1;
+			if (num == elem) {
+				checker = true;
+			}
+			else {
+				checker = false;
+			}
 		}
-		return array;
+		return checker;
 	}
 }
 
 class Main1 {
 	public static void main(String[] args) {
 		LottoGenerator lotto = new LottoGenerator();
-		System.out.println(lotto.generatNumbers());
+		int[] randArray = lotto.generatNumbers();
+		for (int elem : randArray) {
+			System.out.print(elem + " ");
+		}
 	}
 }
