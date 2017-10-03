@@ -7,6 +7,7 @@ class Main2 {
 		int[] nums = {9,7,5,3,2,7,8,1,5,9 };
 		BubbleSort bubbleSort = new BubbleSort();
 		int[] result = bubbleSort.sortArray(nums);
+		System.out.println(Arrays.toString(nums));
 		System.out.println(Arrays.toString(result));
 	}
 }
@@ -14,17 +15,18 @@ class Main2 {
 public class BubbleSort {
 
 	public int[] sortArray(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			for (int index = 1; index < array.length; index++) {
+		int[] result = array.clone();
+		for (int i = 0; i < result.length; i++) {
+			for (int index = 1; index < result.length-i; index++) {
 				int temp = 0;
-				if (array[index-1]>array[index]) {
-					temp = array[index-1];
-					array[index-1] = array[index];
-					array[index] = temp;
+				if (result[index-1]>result[index]) {
+					temp = result[index-1];
+					result[index-1] = result[index];
+					result[index] = temp;
 				}
 
 			}
 		}
-		return array;
+		return result;
 	}
 }

@@ -5,7 +5,7 @@ public class Pi {
         int alternate = -1;
         double sum = 0;
         double fyra=4.0;
-        double term = 4711.0;
+        double term = 5000000;
         double i=1;
         while (Math.abs(term) >1E-9) {
             //for (double i=1.0; i<=1000; i+=2){
