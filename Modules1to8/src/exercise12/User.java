@@ -8,8 +8,23 @@ public class User {
 }
 
 class SearchUsers {
-	public int getMaxAgedUser(int[] array){
+	public int getMaxAgedUser(User[] array){
+		int max = Integer.MIN_VALUE;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].age>max) {
+				max = array[i].age;
+			}
+		}
+		return max;
+	}
 
+	public User getUserByName(User[] users, String name) {
+		for (int i = 0; i < users.length; i++) {
+			if (users[i].name.equals(name)){
+				return users[i];
+			}
+		}
+		return null;
 	}
 }
 
@@ -41,5 +56,12 @@ class Main1 {
 		SearchUsers susers = new SearchUsers();
 		int maxage = susers.getMaxAgedUser(users);
 		System.out.println("max age= " + maxage);
+
+		User result = susers.getUserByName(users, "Joel");
+		if(result != null){
+			System.out.println("Found " + result.name + " from " + result.city);
+		} else{
+			System.out.println("User not found!");
+		}
 	}
 }
