@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ec5207c-d524-4501-a589-a5a9dd255d9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modules.iws" afterPath="$PROJECT_DIR$/Modules.iws" />
-    </list>
+    <list default="true" id="3ec5207c-d524-4501-a589-a5a9dd255d9f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -444,7 +442,7 @@
       <workItem from="1506626627002" duration="640000" />
       <workItem from="1506668325970" duration="4841000" />
       <workItem from="1506767713985" duration="39566000" />
-      <workItem from="1506970542291" duration="33159000" />
+      <workItem from="1506970542291" duration="33266000" />
     </task>
     <task id="LOCAL-00001" summary="klar med modul 9 och 10">
       <created>1507023129106</created>
@@ -478,7 +476,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87196000" />
+    <option name="totallyTimeSpent" value="87303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="841" height="900" extended-state="0" />
