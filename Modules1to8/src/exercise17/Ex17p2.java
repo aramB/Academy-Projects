@@ -7,7 +7,7 @@ public class Ex17p2
 {
 	public static void main(String[] args) {
 		Print print = new Print();
-		String s = "Hello World!";
+		String s = "saöfdgböisdngsdjgöoiajfijadofijafjaoifhjodgnldsnglsidhgoaijinfienfianf";
 		print.printOutput(s);
 	}
 }
@@ -36,9 +36,9 @@ class Print
 		System.out.println("Counting the characters in the string '" + str + "'");
 		System.out.println();
 		Map<Character, Integer> characterMap = charCounter.calc(str);
-		for (Map.Entry<Character, Integer> keyValue: characterMap.entrySet()) {
-			char key = keyValue.getKey();
-			int value = keyValue.getValue();
+		for (Map.Entry<Character, Integer> elem: characterMap.entrySet()) {
+			char key = elem.getKey();
+			int value = elem.getValue();
 			System.out.printf("%2c ", key);
 			for (int i = 0; i < value; i++) {
 				System.out.print('*');

@@ -23,17 +23,14 @@ public class Ex7p6p2 {
         //board[xx][yy]= 255; //rand.nextInt(255);
 
         while (true) {
-
-
             // TODO: Insert you’re your code to draw on the screen here
-
             for (int row = 0; row < board.length; row++) {
                 for (int col = 0; col < board[row].length; col++) {
                     int color = board[row][col];
                     terminal.moveCursor(row, col);
                     terminal.applyForegroundColor(color, 0, color);
                     terminal.putCharacter('\u2588');
-                    //terminal.setCursorVisible(false);
+                    terminal.setCursorVisible(false);
                 }
             }
 
