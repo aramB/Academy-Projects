@@ -20,8 +20,8 @@ public class Customer {
 	}
 
 	public int getId() {
-		return id;
-	}
+			return id;
+		}
 
 	public void setId(final int id) {
 		if (id < 0){

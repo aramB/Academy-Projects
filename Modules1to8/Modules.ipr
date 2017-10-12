@@ -241,6 +241,14 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="org.joda:joda-money:0.12" type="repository">
+      <properties maven-id="org.joda:joda-money:0.12" />
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/joda/joda-money/0.12/joda-money-0.12.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
   <component name="masterDetails">
     <states>
