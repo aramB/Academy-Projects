@@ -30,7 +30,7 @@ public class Ex19
 		printProducts(productList);
 	}
 
-	public static void printProducts(List<Product> lista) {
+	private static void printProducts(List<Product> lista) {
 		for (Product elem : lista) {
 			if (elem instanceof Processor) {
 				System.out.print(elem.productName + "\nFreq: ");

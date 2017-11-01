@@ -1,4 +1,4 @@
-package testProgramming;
+package extraUppgifter;
 
 import java.util.Scanner;
 
@@ -10,16 +10,19 @@ public class Sidnumrering
 		String output = "";
 		System.out.print("Mata in sidnummer: ");
 		while (sc.hasNextInt()) {
-			if (sc.nextInt() == 0) {
-				s += sc.nextInt();
+			int digit = sc.nextInt();
+			if (digit == 0) {
+				s += digit;
 				break;
 			}
 			else {
-				s += sc.nextInt();
+				s += digit;
 			}
 		}
-		for (int i = 0; i < s.length(); i++) {
+		for (int i = 1; i < s.length(); i++) {
+			if (s.charAt(i) == s.charAt(i-1)-1) {
 
+			}
 		}
 
 		System.out.println(s);

@@ -1,17 +1,25 @@
 package exercise20.drawin;
 
+import com.googlecode.lanterna.terminal.Terminal;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class UI
 {
-	List<Shape> shapeList = new ArrayList<>();
-	Rectangle rectangleReferens;
+	Terminal terminal;
 
-	public UI(final List<Shape> shapeList) {
-		this.shapeList = shapeList;
-		for (Shape shape : shapeList) {
-			rectangleReferens.draw();
+	public UI(Terminal terminal) {
+		this.terminal = terminal;
+	}
+
+	public void drawShape(final List<Shape> shapes) {
+		for (Shape shape : shapes) {
+			for (Point point : shape.draw()) {
+				terminal.moveCursor(point.x, point.y);
+				terminal.putCharacter('#');
+			}
 		}
+		terminal.moveCursor(0,0);
 	}
 }

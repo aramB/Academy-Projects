@@ -1,4 +1,4 @@
-package exercise20.drawin;
+package exercise21.ex21p2;
 
 public class Point
 {

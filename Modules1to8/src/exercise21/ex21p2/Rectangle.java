@@ -1,9 +1,9 @@
-package exercise20.drawin;
+package exercise21.ex21p2;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Rectangle extends Shape
+public class Rectangle implements Shape
 {
 	Point start;
 	Point end;
@@ -11,6 +11,14 @@ public class Rectangle extends Shape
 	public Rectangle(final Point start, final Point end) {
 		this.start = start;
 		this.end = end;
+	}
+
+	public Point getStart() {
+		return start;
+	}
+
+	public Point getEnd() {
+		return end;
 	}
 
 	@Override public List<Point> draw() {

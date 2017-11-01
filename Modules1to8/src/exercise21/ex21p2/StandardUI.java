@@ -4,15 +4,15 @@ import com.googlecode.lanterna.terminal.Terminal;
 
 import java.util.List;
 
-public class UI
+public class StandardUI implements UI
 {
 	Terminal terminal;
 
-	public UI(Terminal terminal) {
+	public StandardUI(Terminal terminal) {
 		this.terminal = terminal;
 	}
 
-	public void drawShape(final List<Shape> shapes) {
+	@Override public void drawShape(final List<Shape> shapes) {
 		for (Shape shape : shapes) {
 			for (Point point : shape.draw()) {
 				terminal.moveCursor(point.x, point.y);

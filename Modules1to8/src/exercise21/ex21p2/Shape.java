@@ -1,8 +1,8 @@
-package exercise20.drawin;
+package exercise21.ex21p2;
 
 import java.util.List;
 
-public abstract class Shape
+public interface Shape
 {
-	public abstract List<Point> draw();
+	List<Point> draw();
 }
