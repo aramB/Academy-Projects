@@ -257,15 +257,16 @@ public class NorthwindRepo {
                     "WHERE Orders.OrderID = ?");
             pstm.setInt(1, orderId);
             ResultSet res = pstm.executeQuery();
-
+            String customerID = "";
             while (res.next()) {
                 System.out.println(res.getInt(2) + " "+ res.getInt(3));
+                customerID = res.getString(1);
                 OrderLine orderLine = new OrderLine(res.getInt(2), res.getInt(3));
                 orderLines.add(orderLine);
             }
             if (orderLines.size() > 0) {
                 //we found data
-                return new Order(orderId, res.getString(1), orderLines);
+                return new Order(orderId, customerID, orderLines);
             }
 
         } catch (SQLException e) {
