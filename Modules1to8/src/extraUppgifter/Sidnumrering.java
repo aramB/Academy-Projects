@@ -6,25 +6,26 @@ public class Sidnumrering
 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String s = "";
-		String output = "";
 		System.out.print("Mata in sidnummer: ");
+		int first = sc.nextInt();
+		int current = first;
+		String s = first + "-";
 		while (sc.hasNextInt()) {
-			int digit = sc.nextInt();
-			if (digit == 0) {
-				s += digit;
+			int next = sc.nextInt();
+			if (current+1 == next){
+				current = next;
+			}
+
+			else if (next == 0){
+				s += current;
 				break;
 			}
 			else {
-				s += digit;
+				s += current + ", ";
+				current = next;
 			}
+			//current = next;
 		}
-		for (int i = 1; i < s.length(); i++) {
-			if (s.charAt(i) == s.charAt(i-1)-1) {
-
-			}
-		}
-
 		System.out.println(s);
 	}
 }
