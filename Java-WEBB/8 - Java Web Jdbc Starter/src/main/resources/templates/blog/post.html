@@ -1,0 +1,24 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${blog.title}"></title>
+</head>
+<body>
+<h1 th:text="${blog.title}" />
+
+
+<h2 th:text="${post.title}">
+</h2>
+<p th:text="${post.body}">
+</p>
+
+<hr/>
+<div>
+    <p th:each="comment : ${comment}" th:text="${comment.text}"/>
+</div>
+Show all comments in a list here...
+<hr/>
+
+</body>
+</html>
